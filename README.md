@@ -18,3 +18,46 @@ Example:
 ```bash
 pipenv run python manage.py makemigrations 
 ```
+
+GET {{host}}:{{port}}{{api_path}}/measurements/?id=1
+RESPONSE:
+[
+    {
+        "model": "measurements.measurement",
+        "pk": 1,
+        "fields": {
+            "variable": 4,
+            "value": 2.0,
+            "unit": "kg",
+            "place": "Wakanda",
+            "dateTime": "2022-02-14T03:59:25.149Z"
+        }
+    }
+]
+
+GET {{host}}:{{port}}{{api_path}}/measurements
+RESPONSE:
+[
+    {
+        "model": "measurements.measurement",
+        "pk": 1,
+        "fields": {
+            "variable": 4,
+            "value": 2.0,
+            "unit": "kg",
+            "place": "Wakanda",
+            "dateTime": "2022-02-14T03:59:25.149Z"
+        }
+    },
+    {
+        "model": "measurements.measurement",
+        "pk": 2,
+        "fields": {
+            "variable": 3,
+            "value": -2.0,
+            "unit": "lb",
+            "place": "Banania",
+            "dateTime": "2022-02-14T04:13:08.410Z"
+        }
+    }
+]
