@@ -27,3 +27,5 @@ def measurement_view(request, pk):
         measurement_dto = lo.update_measurement(pk, json.loads(request.body))
         measurement = serializers.serialize('json', [measurement_dto,])
         return HttpResponse(measurement, 'application/json')
+    if request.method == 'DELETE':
+        measurement_dto = lo.delete_measurement(pk)

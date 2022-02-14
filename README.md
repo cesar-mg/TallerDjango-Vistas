@@ -61,3 +61,6 @@ RESPONSE:
         }
     }
 ]
+
+DELETE {{host}}:{{port}}{{api_path}}/measurements/1
+RESPONSE: No response. GET -> No aparece la borrada. Borrado exitoso.

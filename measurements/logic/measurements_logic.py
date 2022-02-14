@@ -23,3 +23,7 @@ def create_measurement(mer):
     measurement = Measurement(variable=mer["variable"],value = mer["value"], unit=mer["unit"],place=mer["place"],dateTime=mer["dateTime"])
     measurement.save()
     return measurement
+def delete_measurement(mer_pk):
+    measurement = Measurement.objects.get(pk=mer_pk)
+    measurement.delete()
+    
